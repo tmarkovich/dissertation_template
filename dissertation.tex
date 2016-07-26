@@ -1,0 +1,27 @@
+% Underlying spacing for the whole document:
+% \ssp % Single spaced.
+% \hsp  % Intermediate spacing
+% \dsp  % Double spacing (GSAS requirement)
+\input{preamble.tex}
+\dsp
+\begin{document}
+
+\input{frontmatter}
+\input{intro}
+
+\graphicspath{{temp_folder/}}
+
+\part{Part I}
+\input{temp_folder/disedit}
+
+\part{Part II}
+
+\part{Future Directions}
+
+% Bibliography:
+{
+\ssp % Single spacing
+\bibliographystyle{thesis}
+\bibliography{bibliography.bib}
+}
+\end{document}

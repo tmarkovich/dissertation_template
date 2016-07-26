@@ -1,0 +1,70 @@
+% Ryan Babbush 2015.
+% TeX template is modified hand-me-down from Ivan Kassal who received it as a
+% modified hand-me-down from Alex Barnett and Adam Lupu-Sax.
+\documentclass[11pt,oneside,final]{huthesis}
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\usepackage{graphicx,float}
+\usepackage{booktabs,tabularx}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{algorithm,algorithmic}
+\usepackage{hyperref,verbatim}
+
+\usepackage[english]{babel}
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usepackage{epic,array}
+\usepackage{multirow}
+\usepackage{fmtcount}
+\usepackage{bm,bbm}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usepackage{pgfplotstable}
+\usepackage{colortbl}
+
+\usepackage[version=3]{mhchem}
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\usepackage{xcolor}
+\definecolor{cream}{RGB}{222,217,201}
+\makeatletter
+\newlength{\figrulesep}
+\setlength{\figrulesep}{0.5\textfloatsep}
+
+\newcommand{\topfigrule}{\vspace*{-1pt}%
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}%
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}%
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+\newcommand{\ang}{\text{\normalfont\AA}}
+
+
+% Math formatting
+\usepackage[mathscr]{euscript} % alternative curly script  %eucal
+
+% Fix the conflict between mathptmx package and the mathcal font
+\let\saveboldmath\boldmath
+\usepackage{mathptmx}
+\let\boldmath\saveboldmath
+
+\DeclareSymbolFont{cmsymbols}{OMS}{cmsy}{m}{n}
+\SetSymbolFont{cmsymbols}{bold}{OMS}{cmsy}{b}{n}
+\DeclareSymbolFontAlphabet{\mathcal}{cmsymbols}
+
+\interfootnotelinepenalty=10000  % Force the footnotes to not break awkwardly.
+% Figures & tables:
+\usepackage{epstopdf} % EPS graphics
+
+%for the bibliography
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\usepackage[square,sort,comma,numbers]{natbib}
