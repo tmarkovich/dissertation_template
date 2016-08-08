@@ -1,4 +1,4 @@
-name = temp_folder
+name = paper1
 blddir = _build
 
 all: $(name).pdf
