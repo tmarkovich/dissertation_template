@@ -1,63 +1,22 @@
-\documentclass[12pt,twocolumn]{article}
-\usepackage{microtype}
-\usepackage{graphicx}
-\usepackage{mathtools}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage[colorlinks,citecolor=Gray,urlcolor=Gray,linkcolor=Cyan]{hyperref}
-\usepackage{booktabs}
-\usepackage[para]{threeparttable}
-\usepackage{tabularx}
-\usepackage{dsfont}
+\documentclass[twocolumn,showpacs,preprintnumbers,nourl,jcp]{revtex4-1}
 
-\usepackage{authblk}
-\renewcommand\Affilfont{\itshape\small} % chktex 6
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,psfrag}
+\usepackage{dcolumn}
+\usepackage{bm,tabularx,ragged2e,booktabs,caption}
+\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{leftidx}
+\usepackage[USenglish]{babel}
 
-\usepackage[normal]{caption}
-\DeclareCaptionLabelSeparator{pipe}{ $$|$$ }
-\captionsetup{labelsep=pipe}
-\renewcommand{\captionfont}{\sffamily\small\mathversion{sans}\fontseries{l}\selectfont}
-\renewcommand{\captionlabelfont}{\bfseries}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{bm}
 
-\DeclareMathOperator{\Erfc}{Erfc}
 
-%%% bibliography %%%
-\usepackage[backend=biber,style=nature]{biblatex}
-\renewcommand{\bibfont}{\raggedright\footnotesize}
-\renewcommand{\textcite}{\cite}
-\setlength{\bibitemsep}{0pt}
-\setlength{\biblabelsep}{3pt}
-\newbibmacro{string+doiurl}[1]{%
-  \href{\strfield{url}}{#1}
-}
-\DeclareFieldFormat[article]{title}{\usebibmacro{string+doiurl}{\mkbibquote{#1}}}
-\makeatletter
-\let\abx@macro@citeOrig\abx@macro@cite%
-\renewbibmacro{cite}{%
-   \bibhyperref{%
-   \let\bibhyperref\relax\relax%
-   \abx@macro@citeOrig%
-   }%
-}
-\let\abx@macro@textciteOrig\abx@macro@textcite%
-\renewbibmacro{textcite}{%
-   \bibhyperref{%
-   \let\bibhyperref\relax\relax%
-   \abx@macro@textciteOrig%
-   }%
-}%
-\makeatother
-%%% end bibliography %%%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
 
-% \addbibresource{$bibliography$}
+\numberwithin{equation}{section}
 
-% \title{$title$}
-
-% $for(author)$
-% \author[$for(author.affil)$$author.affil$$sep$,$endfor$]{$author.name$}
-% $endfor$
-% $for(affiliation)$
-% \affil[$affiliation.id$]{$affiliation.address$}
-% $endfor$
-%
-% \date{$date$}
-
+\numberwithin{equation}{section}
