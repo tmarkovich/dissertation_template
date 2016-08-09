@@ -1,7 +1,4 @@
-% Ryan Babbush 2015.
-% TeX template is modified hand-me-down from Ivan Kassal who received it as a
-% modified hand-me-down from Alex Barnett and Adam Lupu-Sax.
-\documentclass[11pt,oneside,final]{huthesis}
+\documentclass{Dissertate}
 
 \usepackage{amssymb,amsmath,amsfonts,amsthm}
 \usepackage{graphicx,float}
@@ -65,6 +62,11 @@
 % Figures & tables:
 \usepackage{epstopdf} % EPS graphics
 
-%for the bibliography
-\def\newblock{\hskip .11em plus .33em minus .07em}
-\usepackage[square,sort,comma,numbers]{natbib}
+% For some environments we switch back to single-spacing, also
+% provides \dsp in case you need double-spacing where single-spacing
+% is otherwise used.
+\def\ssp{\def\baselinestretch{1.0}\large\normalsize}
+
+% 1.9 is close enough to 2.0 to satisfy harvard university:
+\def\dsp{\def\baselinestretch{1.85}\large\normalsize}
+\def\hsp{\def\baselinestretch{1.2}\large\normalsize} % intermediate spacing
