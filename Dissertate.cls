@@ -15,7 +15,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Dissertate}
-\LoadClass[11pt, twoside, letterpaper]{book}  
+\LoadClass[11pt, twoside, letterpaper]{book}
 
 % Text layout.
 \RequirePackage[ margin=1.25in, letterpaper]{geometry}  %previously width=5.75in
@@ -33,7 +33,7 @@
 \usepackage[T1]{fontenc} % Use T1 font encoding to support additional non-English characters
 \usepackage{textcomp}    % enable use of \textcent command without interferring with bold-math the way that waysym does
 \RequirePackage[version=3]{mhchem} % chemistry package provides \ce{}
-\RequirePackage{amsmath,amsfonts,amssymb} % ams math 
+\RequirePackage{amsmath,amsfonts,amssymb} % ams math
 \RequirePackage{bm}   % bold math package (better than \boldsymbol)
 \RequirePackage{bbm} % blackboard bold math (better than \Bbb)
 \RequirePackage{calligra} % curly script
@@ -58,7 +58,7 @@
 
 
 %  Fixing widows and orphans,
-\widowpenalty=300  
+\widowpenalty=300
 \clubpenalty=300
 
 % Captions:
@@ -69,12 +69,12 @@
                 margin=0pt,
                 figurewithin=chapter,
                 tablewithin=chapter]{caption}
-                
+
 % Footnotes:
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}  % ## POSSIBLY COMMENT OUT
 
 % Headings and headers.
-\RequirePackage{fancyhdr}  
+\RequirePackage{fancyhdr}
 \RequirePackage[tiny, md, sc]{titlesec}
 \setlength{\headheight}{15pt}
 %\pagestyle{plain}  % ## CHECK
@@ -172,7 +172,7 @@
 %% We load hyperref last because one of the packages above causes a minor conflict with footnote definitions
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=false,  % turn off link coloring 
+    colorlinks=false,  % turn off link coloring
     citecolor=SchoolColor,
     filecolor=black,
     linkcolor=black,
@@ -189,20 +189,20 @@
 	\maketitle
 	\copyrightpage
 	%\setstretch{1.2}
-	\abstractpage 
+	\abstractpage
 	% TOC & list of figures may be single spaced
 	\let\cleardoublepage\relax
 	\singlespacing
 	\tableofcontents
 	\doublespacing      % Return to double spacing after
-	
-	% the remaining front mater does not have an order specified by the Harvard formatting guidelines:	
+
+	% the remaining front mater does not have an order specified by the Harvard formatting guidelines:
 	\dedicationpage     % optional
 	\acknowledgments % mandatory
 	\authorlist               % optional
-	
+
 	\doublespacing      % definitely return to double spacing for the main text
-	\pagestyle{maintextstyle} % initiate the desired pagestyle for the rest 
+	\pagestyle{maintextstyle} % initiate the desired pagestyle for the rest
 	\pagenumbering{arabic}	\setcounter{page}{1}  % Start the main text at page #1
 }
 
@@ -244,10 +244,10 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2015 \hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \copyright \small \@degreeyear  \hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
-	\normalfont %\newpage\rm % ### CHECK 
+	\normalfont %\newpage\rm % ### CHECK
 }
 
 % Formatting of the abstract page:
@@ -258,7 +258,7 @@
 	\renewcommand{\footrulewidth}{0pt}}
 
 \newcommand{\abstractpage}{
-	\newpage 
+	\newpage
 	\doublespacing    % ABSTRACT MUST BE DOUBLE SPACED
 	\thispagestyle{abstractstyle}
 	\renewcommand{\headrulewidth}{0.0pt}
@@ -276,10 +276,10 @@
 
 % Formatting of the dedication page:
 \newcommand{\dedicationpage}{
-	\newpage \thispagestyle{plain}  \vspace*{\fill} % ### CHECK 
+	\newpage \thispagestyle{plain}  \vspace*{\fill} % ### CHECK
 	\pagenumbering{roman} \setcounter{page}{6} % ### CHECK THIS NUMBERING
 	\noindent \input{frontmatter/dedication}
-	\vspace*{\fill} \newpage \normalfont %\rm % ### CHECK 
+	\vspace*{\fill} \newpage \normalfont %\rm % ### CHECK
 }
 
 % Formatting of the acknowledgements page:
@@ -287,14 +287,14 @@
 	\pagenumbering{roman} \setcounter{page}{7}  % ### CHECK THIS NUMBERING
 	\chapter*{Acknowledgments}
 	\noindent \input{frontmatter/acknowledgments}
-	\vspace*{\fill}  \newpage\normalfont % \rm % ### CHECK 
+	\vspace*{\fill}  \newpage\normalfont % \rm % ### CHECK
 }
 
 % Formatting of the authorlist page
-\newcommand{\authorlist}{    
+\newcommand{\authorlist}{
         \pagenumbering{roman} \setcounter{page}{9} % ### CHECK THIS NUMBERING
         \chapter*{Further Acknowledgements by Chapter}
         \noindent \input{frontmatter/authorlist}
-        \vspace*{\fill}   \newpage\normalfont % \rm % ### CHECK 
+        \vspace*{\fill}   \newpage\normalfont % \rm % ### CHECK
 }
 

@@ -6,3 +6,9 @@ This template is constructed such that you can take your current papers and make
 In my recommendation, each paper should get its own folder. In that folder, the body of the paper should be broken out into `text.tex`, the abstract into `abstract.tex`, and the citations in `disedit.tex` should be fixed. It's actually quite easy to use the paper format detailed above while writing your papers, and makes throwing together the meat of a dissertation quite easy. 
 
 Of course, I did not write all of this. Much of this thesis template was handed down to me from Jacob Sanders, Ryan Babbush, and others. There are many references in the various latex templates to credit them and their work.
+
+The python3 script bibliography/bib_check.py will check your bibliography for missing DOIs, duplicate entries, stray unicode characters, and journal abbreviations. Invoke it by running
+
+python3 bib_check.py myBibliographyHere.bib 
+
+at terminal. 
