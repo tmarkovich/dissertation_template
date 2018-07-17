@@ -298,3 +298,52 @@
         \vspace*{\fill}   \newpage\normalfont % \rm % ### CHECK
 }
 
+% Formatting of clearpage. Author: Joseph Goodknight (github:jgoodknight)
+\renewcommand\part{%
+    \clearpage
+  \thispagestyle{plain}%
+  \null\vfil
+  \secdef\@part\@spart}
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \bfseries #2\par}%
+    \@endpart}
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \Huge \bfseries #1\par}%
+    \@endpart}
+
+\def\@endpart{\vfil\newpage
+              \if@twoside
+               \if@openright
+
+            \vspace*{\fill}
+            \hfill
+            \begin{center}
+            This page intentionally left blank.
+            \end{center}
+            \vspace{\fill}
+            \thispagestyle{plain}
+                \newpage
+               \fi
+              \fi
+              \if@tempswa
+                \twocolumn
+              \fi}
+
