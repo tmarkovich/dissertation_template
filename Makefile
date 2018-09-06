@@ -4,7 +4,7 @@ blddir = _build
 all: $(name).pdf
 
 %.pdf: %.tex | $(blddir)
-	@latexmk -halt-on-error -pdf -jobname=$(blddir)/$* $<
+	@latexmk -halt-on-error -bibtex -pdf -jobname=$(blddir)/$* $<
 	@mv $(blddir)/$@ .
 
 $(blddir):
