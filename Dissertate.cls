@@ -194,6 +194,9 @@
 	\let\cleardoublepage\relax
 	\singlespacing
 	\tableofcontents
+    \newpage
+    \listoffigures
+    \newpage
 	\doublespacing      % Return to double spacing after
 
 	% the remaining front mater does not have an order specified by the Harvard formatting guidelines:
