@@ -224,6 +224,7 @@
 % Formatting of the title page:
 \renewcommand{\maketitle}{
 	\thispagestyle{empty}
+	\pagenumbering{gobble}
 	\vspace*{\fill}
 	\vspace{100pt}
 	\begin{center}
